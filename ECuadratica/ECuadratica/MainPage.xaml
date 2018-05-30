@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ECuadratica"
+             x:Class="ECuadratica.MainPage">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="10" Spacing="10">
+                <Image Source="image1.png"
+                       HeightRequest="50"/>
+                <Label Text="Ecuacion Cuadratica"
+                       Font="20"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       TextColor="Brown"/>
+                <Entry x:Name="valorAentry"
+                       Placeholder="Valor de A"
+                       Keyboard="Numeric"/>
+                <Entry x:Name="valorBentry"
+                       Placeholder="Valor de B"
+                       Keyboard="Numeric"/>
+                <Entry x:Name="valorCentry"
+                       Placeholder="Valor de C"
+                       Keyboard="Numeric"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="X1= "/>
+                    <Label x:Name="result1"
+                       Text="Resultado 1"
+                       IsVisible="True"
+                       HorizontalTextAlignment="End"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="X2= "/>
+                    <Label x:Name="result2"
+                       Text="Resultado 2"
+                       IsVisible="True"
+                       HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <Button x:Name="calcularButton"
+                        Text="Calcular"
+                        BackgroundColor="Red"
+                        TextColor="WhiteSmoke"
+                        BorderRadius="10"
+                        BorderWidth="2"
+                        HorizontalOptions="Center"/>
+                
+                <ListView x:Name="listaListView" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>
